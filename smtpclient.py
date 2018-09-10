@@ -25,12 +25,6 @@ for i in range(1,(length_argument)):
     elif(arguments[i]== '-s'):
         i+=1
         server_ip = arguments[i]
-        
-#print(from_email)
-#print(*to_email, sep=",")
-#print(*filenames, sep=",")
-#print(server_ip)
-
 
 print("Please enter your password to authenticate")
 password = input()

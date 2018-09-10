@@ -46,7 +46,10 @@ msg['To'] = ', '.join(to_email)
 msg['Subject'] =', '.join(filenames)
 msg.attach(MIMEText(message,'plain'))
 
-
-smtp.sendmail(from_email,to_email[0],msg.as_string())
+try:
+    smtp.sendmail(from_email,to_email[0],msg.as_string())
+    print("Email Sent Successfully")
+except SMTPException:
+    print(SMTPException)
 del msg
 smtp.quit()
